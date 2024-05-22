@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submitted Information</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
+</head>
+<body>
+    <h1>Submitted Information</h1>
+    <table>
+        <!-- <thead>
+            <tr>
+                <th>Field</th>
+                <th>Value</th>
+            </tr>
+        </thead> -->
+        <tbody>
+            {% for key, value in welcome_message.items() %}
+                <tr>
+                    <td>{{ key }}</td>
+                    <td>{{ value }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a class ="btn" href = "https://docs.google.com/spreadsheets/d/18EKBc3L2ah1Igsr3JW0_Ql-nbMYDP9dw6wsBDP3Yyfc/edit#gid=0">Open the Sheet</a>
+
+    <!-- You can add additional styling or content here -->
+</body>
+</html>

@@ -1,0 +1,123 @@
+body, .parallax {
+    background-image: url("image3.jpeg"); 
+    background-repeat: no-repeat;
+    height: 50%; 
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: "Times New Roman", Times, serif;
+    text-align: center;
+    background-color: #0a0909;
+}
+/* h1{ margin-top: 50ox auto;
+    font-size: 50px;
+    text-align: center;
+    margin-left: 28px;
+    background-color: azure;
+    
+
+} */
+h1
+{
+    background-color: transparent;
+    backdrop-filter: blur(15px);
+    max-width: 550px;
+    margin: 50px auto;
+    box-shadow: 10px 20px 10px rgba(71, 10, 107, 0.5);
+    color:rgb(236, 235, 233);
+}
+form{
+    background-color: transparent;
+    backdrop-filter: blur(15px);
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px 20px;
+    box-shadow: 20px 20px 20px rgba(71, 10, 107, 0.5);
+}
+
+.form-control {
+text-align: left;
+margin-bottom: 25px;
+}
+
+.form-control label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-control input,
+.form-control select,
+.form-control textarea {
+    border: 1px solid #777;
+    border-radius: 5px;
+    font-family: inherit;
+    padding: 10px;
+    display: block;
+    width: 95%;
+}
+
+    .form-control input[type="radio"],
+    .form-control input[type="checkbox"]
+    { display: inline-block;
+      width: auto;
+}
+
+button {
+    background-color: rgb(250, 251, 252);
+    border: none;
+    border-radius: 20em;
+    font-family: inherit;
+    font-size: 21px;
+    display: block;
+    width: 9em;
+    height: 3em;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    margin-left: 27.5%;
+    font-weight: bold;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 10px 20px 10px rgba(71, 10, 107, 0.5);
+}
+
+button::before{
+    content: '';
+    width: 0;
+    height: 3em;
+    border-radius: 20em;
+    position: absolute;
+    top: 0;
+    left:0;
+    background-image: linear-gradient(to right, #a2a1c2 0%, #811097 100%);
+    transition: .15s ease;
+    display: block;
+    z-index: -1;
+}
+button:hover::before{
+    width: 9em;
+
+}
+
+.form-control input[type="text"],
+.form-control select[name="role"] {
+    color: rgb(2, 2, 2); 
+    background-color: rgb(191, 159, 197); 
+    font-weight: bold;
+    font-size: 16px;
+}
+.form-control textarea[name="comment"]{
+    color: rgb(3, 3, 3);
+    background-color: rgb(191, 159, 197);
+    font-weight: bold; 
+    font-size: 16px;
+}
+.form-control label {
+    color: rgb(237, 237, 241);
+    font-weight: bold;
+}
+.form-control input[type="checkbox"], input[type="radio"] {
+  filter: hue-rotate(60deg);
+  }
+

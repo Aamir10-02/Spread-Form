@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Survey form</title>
+  </head>
+  <body>
+    <h1>
+      <span>S</span>
+      <span>u</span> 
+      <span>b</span>
+      <span>m</span>
+      <span>i</span>
+      <span>s</span>
+      <span>s</span>
+      <span>i</span>
+      <span>o</span>
+      <span>n</span>
+&nbsp;
+<span>F</span>
+<span>o</span>
+<span>r</span>
+<span>m</span>
+    </h1>
+    
+    <!-- <form method="POST" action="/"> -->
+      <form method="POST" action="/">
+      <div class="form-control">
+        <label for="name" id="label-name">
+          Name
+        </label>
+        <input type="text" id="name" name="name" placeholder="Enter your Name"/>
+      </div>
+      <div class="form-control">
+        <label for="email" id="label-email">
+          E-mail
+        </label>
+        <input type="text" id="email" name="email" placeholder="Enter your E-mail"/>
+      </div>
+      <div class="form-control">
+        <label for="role" id="label-role">
+          Which option best describes you?
+        </label>
+        <select name="role" id="role">
+          <option value="student">Student</option>
+          <option value="intern">Intern</option>
+          <option value="professional">Professional</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="form-control">
+        <label>
+          Would you invite your friends?
+        </label>
+        <label for="recommed-1">
+          <input type="radio" id="recommed-1" name="recommend" value="Yes">
+          Yes
+        </label>
+        <label for="recommed-2">
+          <input type="radio" id="recommed-2" name="recommend" value="No">
+          No
+        </label>
+        <label for="recommed-3">
+          <input type="radio" id="recommed-3" name="recommend" value="Maybe">
+          Maybe
+        </label>
+        
+      </div>
+        <div class="form-control">
+          <label>
+            Languages and Frameworks known
+            <small>(check all that apply)</small>
+          </label>
+          <label for="inp-1">
+            <input type="checkbox" name="languages[]" value="C" id="inp-1"> C
+          </label>
+          <label for="inp-2">
+            <input type="checkbox" name="languages[]" value="C++" id="inp-2"> C++
+          </label>
+          <label for="inp-3">
+            <input type="checkbox" name="languages[]" value="C#" id="inp-3"> C#
+          </label>
+          <label for="inp-4">
+            <input type="checkbox" name="languages[]" value="Java" id="inp-4"> Java
+          </label>
+          <label for="inp-5">
+            <input type="checkbox" name="languages[]" value="Python" id="inp-5"> Python
+          </label>
+          <label for="inp-6">
+            <input type="checkbox" name="languages[]" value="JavaScript" id="inp-6"> JavaScript
+          </label>
+          <label for="inp-7">
+            <input type="checkbox" name="languages[]" value="React" id="inp-7"> React
+          </label>
+          <label for="inp-8">
+            <input type="checkbox" name="languages[]" value="Angular" id="inp-8"> Angular
+          </label>
+          <label for="inp-9">
+            <input type="checkbox" name="languages[]" value="Django" id="inp-9"> Django
+          </label>
+          <label for="inp-10">
+            <input type="checkbox" name="languages[]" value="Spring" id="inp-10"> Spring
+          </label>
+        </div>        
+        <div class="form-control">
+          <label for="comment">
+            Any comments or suggestions
+          </label>
+          <textarea name="comment" id="comment" placeholder="Enter your comment here"></textarea>
+        </div>
+        <button type="submit" value="submit">Submit</button>
+    </Form>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+body, .parallax {
+    background-image: url("image3.jpeg"); 
+    background-repeat: no-repeat;
+    height: 50%; 
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: "Times New Roman", Times, serif;
+    text-align: center;
+}
+h1
+{
+background-color: transparent;
+backdrop-filter: blur(15px);
+max-width: 550px;
+margin: 50px auto;
+box-shadow: 10px 20px 10px rgba(71, 10, 107, 0.5);
+color:rgb(236, 235, 233);
+}
+
+/* styles.css */
+
+table {
+    border-collapse: collapse;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgb(243, 240, 240);
+    background-color: transparent;
+    margin: 0 auto; /* Center the table horizontally */
+    box-shadow: 10px 20px 10px rgba(71, 10, 107, 0.5);
+}
+
+table td {
+    padding: 8px;
+    border: 1px solid rgb(247, 243, 243);
+    color: white;
+}
+
+.btn {
+    background-color: #811097;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 20em;
+    font-family: inherit;
+    box-shadow: 10px 20px 10px rgba(71, 10, 107, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6em;
+    height: 2em;
+    margin: 20px auto; /* Center the button and add some space above it */
+    font-weight: bold;
+    cursor: pointer;
+}
+/* .btn {
+    background-color: #811097;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 20em;
+    font-family: inherit;
+    box-shadow: 10px 20px 10px rgba(71, 10, 107, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6em;
+    height: 2em;
+    margin: 0;
+
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1.5em;
+    
+  } */
