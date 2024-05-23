@@ -4,7 +4,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 
 
 app = Flask(__name__)
-app.secret_key = 'Aamir' 
+app.secret_key = '' 
 
 # Path to the service account credentials file
 CREDENTIALS_FILE = 'gs_credentials.json'
