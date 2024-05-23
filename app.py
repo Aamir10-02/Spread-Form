@@ -19,9 +19,9 @@ creds = ServiceAccountCredentials.from_json_keyfile_name(CREDENTIALS_FILE, SCOPE
 client = gspread.authorize(creds)
 
 # The name of your Google Sheet
-SHEET_NAME = 'Information'
+SHEET_NAME = 'Add_your_spreadsheet'
 SHEET = client.open(SHEET_NAME)
-worksheet = SHEET.sheet1
+worksheet = SHEET.sheet
 
 
 def save_to_google_sheets(name, email, role, recommend, languages, comment):
