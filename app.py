@@ -7,7 +7,7 @@ app = Flask(__name__)
 app.secret_key = '' 
 
 # Path to the service account credentials file
-CREDENTIALS_FILE = 'gs_credentials.json'
+CREDENTIALS_FILE = 'your_credentials.json'
 
 # Define the scope for the API
 SCOPES = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/spreadsheets", "https://www.googleapis.com/auth/drive.file", "https://www.googleapis.com/auth/drive"]
