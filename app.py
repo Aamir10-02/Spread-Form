@@ -1,21 +1,23 @@
 from flask import Flask, render_template, request, redirect, url_for, session
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
-
+import json
+import os
 
 app = Flask(__name__)
 app.secret_key = 'Aamir' 
 
 # Path to the service account credentials file
-CREDENTIALS_FILE = 'gs_credentials.json'
+# CREDENTIALS_FILE = 'gs_credentials.json'
+credentials_info = json.loads(os.environ.get('GOOGLE_CREDENTIALS'))
 
-# Define the scope for the API
+# # Define the scope for the API
 SCOPES = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/spreadsheets", "https://www.googleapis.com/auth/drive.file", "https://www.googleapis.com/auth/drive"]
 
-
+# # SCOPES = ['https://www.googleapis.com/auth/spreadsheets', 'https://www.googleapis.com/auth/drive']
 
 # Load the credentials and create a client to interact with the Google Sheets API
-creds = ServiceAccountCredentials.from_json_keyfile_name(CREDENTIALS_FILE, SCOPES)
+creds = ServiceAccountCredentials.from_json_keyfile_name(credentials_info, SCOPES)
 client = gspread.authorize(creds)
 
 # The name of your Google Sheet
@@ -40,7 +42,8 @@ def login():
         comment = request.form['comment']
 
         save_to_google_sheets(name, email, role, recommend, languages, comment)
-        
+        # worksheet.append_row([name, email, role, recommend, ','.join(languages), comment])
+
         session['welcome_message'] = {
             'Name': name,
             'Email': email,
@@ -61,3 +64,25 @@ def display_info():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+# import gspread
+# from oauth2client.service_account import ServiceAccountCredentials
+# from pprint import pprint
+
+
+
+# # Path to the service account credentials file
+# CREDENTIALS_FILE = 'gs_credentials.json'
+
+# # Define the scope for the API
+# SCOPES = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/spreadsheets", "https://www.googleapis.com/auth/drive.file", "https://www.googleapis.com/auth/drive"]
+
+# # SCOPES = ['https://www.googleapis.com/auth/spreadsheets', 'https://www.googleapis.com/auth/drive']
+
+# # Load the credentials and create a client to interact with the Google Sheets API
+# creds = ServiceAccountCredentials.from_json_keyfile_name(CREDENTIALS_FILE, SCOPES)
+# client = gspread.authorize(creds)
+# sheet = client.open('Information').sheet1
+# data = sheet.get_all_records()
+# pprint(data)
+# sheet.delete_(6,1,"Aamir")
