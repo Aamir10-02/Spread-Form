@@ -5,11 +5,12 @@ import json
 import os
 
 app = Flask(__name__)
-app.secret_key = 'Aamir' 
+app.secret_key = '' 
 
 # Path to the service account credentials file
 # CREDENTIALS_FILE = 'gs_credentials.json'
 credentials_info = json.loads(os.environ.get('GOOGLE_CREDENTIALS'))
+CREDENTIALS_FILE = 'your_credentials.json'
 
 # # Define the scope for the API
 SCOPES = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/spreadsheets", "https://www.googleapis.com/auth/drive.file", "https://www.googleapis.com/auth/drive"]
@@ -21,9 +22,9 @@ creds = ServiceAccountCredentials.from_json_keyfile_name(credentials_info, SCOPE
 client = gspread.authorize(creds)
 
 # The name of your Google Sheet
-SHEET_NAME = 'Information'
+SHEET_NAME = 'Add_your_spreadsheet'
 SHEET = client.open(SHEET_NAME)
-worksheet = SHEET.sheet1
+worksheet = SHEET.sheet
 
 
 def save_to_google_sheets(name, email, role, recommend, languages, comment):
