@@ -17,10 +17,11 @@ app.secret_key = '1234'
 SCOPES = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/spreadsheets", "https://www.googleapis.com/auth/drive.file", "https://www.googleapis.com/auth/drive"]
 credentials_base64 = os.getenv('GOOGLE_CREDENTIALS')
 if credentials_base64:
+    # Add padding if necessary
+    credentials_base64 += '=' * (-len(credentials_base64) % 4)
     credentials_json = base64.b64decode(credentials_base64)
-    creds = ServiceAccountCredentials.from_json_keyfile_dict(
-        json.loads(credentials_json), SCOPES
-    )
+    creds_dict = json.loads(credentials_json)
+    creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, SCOPES)
 else:
     raise ValueError("GOOGLE_CREDENTIALS environment variable not set")
 
