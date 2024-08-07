@@ -12,7 +12,7 @@ This repository contains a Flask web application that integrates with Google She
 - [Project Structure](#project-structure)
 - [Environment Variables](#environment-variables)
 - [Acknowledgements](#acknowledgements)
-- [License](#license)
+
 
 ## Introduction
 
