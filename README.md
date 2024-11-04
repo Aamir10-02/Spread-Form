@@ -28,7 +28,7 @@ This project demonstrates a Flask application that allows users to submit their 
 ## Architecture
 
 1. **Frontend**: HTML templates for user input and display (located in the `templates` directory).
-2. **Backend**: Flask web framework for handling HTTP requests and interacting with Google Sheets.
+2. **Backend**: Flask web framework for handling user requests and interacting with Google Sheets.
 3. **Google Sheets API**: Used for data storage and retrieval.
 4. **Session Management**: Flask sessions are used to manage user data between requests.
 
@@ -83,12 +83,12 @@ This project demonstrates a Flask application that allows users to submit their 
 
 ```plaintext
 flask-google-sheets/
-├── application.py          # Main Flask application
-├── requirements.txt        # List of dependencies
-├── templates/              # HTML templates
+├── application.py          
+├── requirements.txt       
+├── templates/             
 │   ├── first.html
 │   └── display_info.html
-└── static/                 # Static files (CSS, JS, images)
+└── static/                
     └── styles.css
 ```
 
