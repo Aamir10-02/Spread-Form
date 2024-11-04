@@ -51,7 +51,7 @@ This project demonstrates a Flask application that allows users to submit their 
 2. **Create a virtual environment**
     ```bash
     python -m venv venv
-    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+    source venv\Scripts\activate`
     ```
 
 3. **Install dependencies**
